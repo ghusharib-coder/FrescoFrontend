@@ -1,5 +1,5 @@
 import React from "react";
-import { createBrowserRouter, Router, RouterProvider } from "react-router-dom";
+import { createBrowserRouter,RouterProvider } from "react-router-dom";
 import ShopingCart from "./Shoping-cart/ShopingCart";
 import Home from "./Shoping-cart/Home";
 import Cart from "./Shoping-cart/Cart";
