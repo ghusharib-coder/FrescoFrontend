@@ -10,7 +10,7 @@ function SignUp({switchToLogin}) {
   } = useForm();
   const OnSubmit = async(data) => {
     try {
-      const res = await fetch("https://your-backend.vercel.app/api/users/signup", {
+      const res = await fetch("https://fresco-backend-chi.vercel.app/api/users/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
