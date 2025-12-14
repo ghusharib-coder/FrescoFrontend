@@ -10,10 +10,11 @@ function SignUp({switchToLogin}) {
   } = useForm();
   const OnSubmit = async(data) => {
     try {
+      const payload = { name: data.name, password: data.password };
       const res = await fetch("https://fresco-backend-chi.vercel.app/api/users/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       });
 
       const result = await res.json();
