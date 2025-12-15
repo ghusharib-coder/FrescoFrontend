@@ -36,7 +36,6 @@ const Product = () => {
         </div>
         <button className="product-page-button" onClick={()=>{
           if (product) {
-                const Product = JSON.parse(product);
                 dispatch(add(Product));
                 setShowPopup(true);
                 setTimeout(() => {
