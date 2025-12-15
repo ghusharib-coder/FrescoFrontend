@@ -94,7 +94,7 @@ catch (error) {
       <div id="Shoping-cart-banner">
         <Banner/>
       </div>
-      <div id="Shoping-cart-home" style={{ filter: ShowPopup && "blur(10px)" }}>
+      <div id="Shoping-cart-home" style={{ filter: ShowPopup ? "blur(10px)": "none" }}>
       {" "}
       <div className="cart-icon">
         {" "}

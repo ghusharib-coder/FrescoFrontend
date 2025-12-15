@@ -395,8 +395,10 @@ input{
   flex-direction: column;
   box-sizing: border-box;
   padding: 0.5rem;
-
-}
+  }
+  .pop-up{
+    width: 85%;
+  }
   input{
     width: 90%;
     height: 2.2rem;
