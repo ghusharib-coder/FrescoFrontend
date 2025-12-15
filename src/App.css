@@ -380,6 +380,14 @@ input{
     width: 100%;
     height: 20rem;
   }
+  .products-page{
+    display: flex;
+    flex-direction: column;
+  }
+  .product-page-image{
+    width: 100%;
+    height: 20rem;
+  }
   input{
     width: 90%;
     height: 2.2rem;
