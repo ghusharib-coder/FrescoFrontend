@@ -41,7 +41,7 @@ const Cart = () => {
     setTimeout(() => setShowPopup(false), 1000);
 
     try {
-      await axios.delete("http://localhost:3000/api/users/remove", {
+      await axios.delete("https://fresco-backend-gray.vercel.app/api/users/remove", {
         data: { userId: user._id, productId },
       });
     } catch (err) {

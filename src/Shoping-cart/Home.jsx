@@ -34,7 +34,7 @@ const Home = () => {
   }
   // send to backend
   try {
-    const res=await fetch("http://localhost:3000/api/users/add", {
+    const res=await fetch("https://fresco-backend-gray.vercel.app/api/users/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json", // ✅ must include this

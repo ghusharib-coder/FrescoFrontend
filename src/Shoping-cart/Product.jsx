@@ -35,7 +35,7 @@ const Product = () => {
           <br></br> ${product.description}
         </div>
         <button className="product-page-button">
-          <b>Remove From Cart</b>
+          <b>Add To Cart</b>
         </button>
       </div>
     </div>
