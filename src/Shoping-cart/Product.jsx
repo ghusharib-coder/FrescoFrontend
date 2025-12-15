@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { add } from "./cartSlice";
 import { AddPopup} from "./Popup";
+import { useState } from "react";
 const Product = () => {
     const [ShowPopup, setShowPopup] = useState(false);
   const location = useLocation();
