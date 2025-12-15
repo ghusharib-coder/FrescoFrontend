@@ -1,10 +1,13 @@
 import { useLocation } from "react-router-dom";
 import { add } from "./cartSlice";
 import { AddPopup} from "./Popup";
+import { useDispatch } from "react-redux";
 import { useState } from "react";
 const Product = () => {
     const [ShowPopup, setShowPopup] = useState(false);
   const location = useLocation();
+  const dispatch = useDispatch();
+
   const { product } = location.state;
 
   return (
@@ -39,7 +42,7 @@ const Product = () => {
         </div>
         <button className="product-page-button" onClick={()=>{
           if (product) {
-                dispatch(add(Product));
+                dispatch(add(product));
                 setShowPopup(true);
                 setTimeout(() => {
                   setShowPopup(false);
