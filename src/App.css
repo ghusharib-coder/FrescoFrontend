@@ -384,4 +384,7 @@ input{
     width: 70%;
     height: 2rem;
   }
+  .Form{
+    width: 90%;
+  }
 }
