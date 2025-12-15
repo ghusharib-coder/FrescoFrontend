@@ -1,6 +1,8 @@
 import { useLocation } from "react-router-dom";
-
+import { add } from "./cartSlice";
+import { AddPopup} from "./Popup";
 const Product = () => {
+    const [ShowPopup, setShowPopup] = useState(false);
   const location = useLocation();
   const { product } = location.state;
 
@@ -46,6 +48,11 @@ const Product = () => {
           <b>Add To Cart</b>
         </button>
       </div>
+      {ShowPopup &&
+              ReactDOM.createPortal(
+                <AddPopup />,
+                document.getElementById("new-root")
+              )}{" "}
     </div>
   );
 };
