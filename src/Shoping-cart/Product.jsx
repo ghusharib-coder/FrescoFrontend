@@ -34,7 +34,16 @@ const Product = () => {
           </span>
           <br></br> ${product.description}
         </div>
-        <button className="product-page-button">
+        <button className="product-page-button" onClick={()=>{
+          if (product) {
+                const Product = JSON.parse(product);
+                dispatch(add(Product));
+                setShowPopup(true);
+                setTimeout(() => {
+                  setShowPopup(false);
+                }, 1000);
+              }
+        }}>
           <b>Add To Cart</b>
         </button>
       </div>

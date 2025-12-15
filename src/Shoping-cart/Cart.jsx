@@ -17,7 +17,7 @@ const Cart = () => {
       if (!user) return;
       try {
         const res = await fetch(
-          `http://localhost:3000/api/users/cart/${user._id}`
+          `https://fresco-backend-gray.vercel.app/api/users/cart/${user._id}`
         );
         const data=await res.json();
         console.log(data.items);
