@@ -296,7 +296,7 @@ input{
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  position: absolute;
+  position: fixed;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
@@ -357,7 +357,7 @@ input{
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   position: relative;
-  z-index: 1000;
+  z-index: 500;
 }
 .About{
   overflow-x: hidden;

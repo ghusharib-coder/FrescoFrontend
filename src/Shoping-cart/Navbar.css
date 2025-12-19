@@ -23,6 +23,11 @@
 .nav-links {
   display: flex;
   gap: 20px;
+  position: fixed;  /* stays at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;    /* higher than banner */
 }
 
 .nav-links a {
