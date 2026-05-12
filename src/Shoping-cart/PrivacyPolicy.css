@@ -1,0 +1,133 @@
+.privacy-policy-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem 1rem;
+}
+
+.privacy-policy-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-policy-content h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.last-updated {
+  text-align: center;
+  color: #999;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.policy-section {
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.policy-section h2 {
+  font-size: 1.5rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 0.5rem;
+}
+
+.policy-section p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.policy-section ul {
+  list-style-position: inside;
+  color: #555;
+  margin-left: 1rem;
+}
+
+.policy-section li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.policy-section ul li::marker {
+  color: #667eea;
+}
+
+.contact-info {
+  background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+  padding: 1.5rem;
+  border-left: 4px solid #667eea;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.contact-info p {
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.contact-info strong {
+  color: #667eea;
+}
+
+.disclaimer {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.disclaimer p {
+  margin: 0;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .privacy-policy-content {
+    padding: 2rem 1rem;
+  }
+
+  .privacy-policy-content h1 {
+    font-size: 2rem;
+  }
+
+  .policy-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .policy-section ul {
+    margin-left: 0.5rem;
+  }
+
+  .policy-section li {
+    margin-bottom: 0.6rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .privacy-policy-container {
+    background: white;
+    padding: 0;
+  }
+
+  .privacy-policy-content {
+    box-shadow: none;
+    padding: 1rem;
+  }
+
+  .policy-section {
+    page-break-inside: avoid;
+  }
+}

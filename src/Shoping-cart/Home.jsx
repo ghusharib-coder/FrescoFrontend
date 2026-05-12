@@ -5,12 +5,14 @@ import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 import { fetchdata } from "./HomeSlice";
 import { add } from "./cartSlice";
+import API_BASE_URL from '../config.js';
 import { AddPopup, DuplicatePopup } from "./Popup";
 import Banner from "./Banner";
 const Home = () => {
   const dispatch = useDispatch();
   const [ShowPopup, setShowPopup] = useState(false);
   const [ShowDuplicatePopup, setShowDuplicatePopup] = useState(false);
+  const [loadingProductId, setLoadingProductId] = useState(null);
   const { products, isloading } = useSelector((state) => state.home);
   const cartItems = useSelector((state) => state.cart.products);
   const ProductImage = ({ src, alt }) => {
@@ -27,17 +29,19 @@ const Home = () => {
     dispatch(fetchdata());
   }, []);
   const handleEvent = async (product) => {
-  const user = JSON.parse(localStorage.getItem("user")); // logged-in user
+  const user = JSON.parse(localStorage.getItem("user"));
   if (!user) {
     alert("Please log in first");
     return;
   }
-  // send to backend
+  
+  setLoadingProductId(product.id);
+  
   try {
-    const res=await fetch("https://fresco-backend-gray.vercel.app/api/users/add", {
+    const res=await fetch(`${API_BASE_URL}/add`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json", // ✅ must include this
+        "Content-Type": "application/json",
       },
       body:JSON.stringify( {
       userId: user._id,
@@ -48,8 +52,6 @@ const Home = () => {
       image: product.image,
     })
   })
-    // also update Redux store for instant UI
-    // popup effect
     if(res.ok){
       dispatch(add(product));
       setShowPopup(true);
@@ -63,6 +65,9 @@ const Home = () => {
 catch (error) {
     console.error(error);
     alert("Failed to add item to cart");
+  }
+  finally {
+    setLoadingProductId(null);
   }
 };
 
@@ -153,9 +158,10 @@ catch (error) {
                   onClick={() => {
                     handleEvent(product);
                   }}
+                  disabled={loadingProductId === product.id}
                 >
                   {" "}
-                  <b>Add to Cart</b>{" "}
+                  <b>{loadingProductId === product.id ? "⏳ Adding..." : "🛒 Add to Cart"}</b>{" "}
                 </button>{" "}
               </div>{" "}
             </div>

@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="nav-logo">FRESCO Store</div>
+      <div className="nav-logo">🛍️ FRESCO Store</div>
 
       {/* Hamburger Icon */}
       <div
@@ -23,13 +23,13 @@ const Navbar = () => {
 
       {/* Links */}
       <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <Link to="Home" onClick={() => setMenuOpen(false)} style={{fontSize:'1.25rem',marginLeft:'2rem'}}>Home</Link>
-        <Link to="Cart" onClick={() => setMenuOpen(false)} style={{fontSize:'1.25rem',marginLeft:'2rem'}}>Cart</Link>
-        <Link to="About" onClick={() => setMenuOpen(false)} style={{fontSize:'1.25rem',marginLeft:'2rem'}}>About</Link>
-        <Link to="Contact" onClick={() => setMenuOpen(false)} style={{fontSize:'1.25rem',marginLeft:'2rem'}}>Contact</Link>
+        <Link to="Home" onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link to="Cart" onClick={() => setMenuOpen(false)}>🛒 Cart</Link>
+        <Link to="About" onClick={() => setMenuOpen(false)}>About</Link>
+        <Link to="Contact" onClick={() => setMenuOpen(false)}>Contact</Link>
       </div>
 
-      <div className="cart-info" style={{fontSize:'1.25rem',marginLeft:'1rem'}}>Cart Items: {items.length}</div>
+      <div className="cart-info">📦 Items: {items.length}</div>
     </nav>
   );
 };

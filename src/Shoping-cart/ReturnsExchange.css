@@ -1,0 +1,238 @@
+.returns-exchange-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem 1rem;
+}
+
+.returns-exchange-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.returns-exchange-content h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.intro-text {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.policy-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.policy-section:last-child {
+  border-bottom: none;
+}
+
+.policy-section h2 {
+  font-size: 1.8rem;
+  color: #667eea;
+  margin-bottom: 1.5rem;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.step-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  color: white;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.step-number {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  opacity: 0.3;
+}
+
+.step-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.step-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.conditions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.condition-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-left: 4px solid #667eea;
+  border-radius: 0.5rem;
+}
+
+.condition-icon {
+  color: #667eea;
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-width: 30px;
+}
+
+.condition-item p {
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.exchanges-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.exchange-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f0f8ff;
+  border-left: 4px solid #764ba2;
+  border-radius: 0.5rem;
+}
+
+.exchange-icon {
+  color: #764ba2;
+  font-size: 1.5rem;
+  min-width: 30px;
+  text-align: center;
+}
+
+.exchange-item p {
+  margin: 0;
+  color: #333;
+}
+
+.exchange-note {
+  background: #fffef0;
+  padding: 1rem;
+  border-left: 4px solid #ffc107;
+  border-radius: 0.5rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.refund-info {
+  background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.refund-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.refund-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.refund-item h3 {
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.refund-item p {
+  color: #666;
+  margin: 0;
+}
+
+.non-returnable {
+  background: #fff3cd;
+  padding: 1.5rem;
+  border-left: 4px solid #ff9800;
+  border-radius: 0.5rem;
+}
+
+.non-returnable h2 {
+  color: #ff9800;
+}
+
+.non-returnable ul {
+  list-style-position: inside;
+  color: #333;
+  line-height: 2;
+}
+
+.non-returnable li::marker {
+  color: #ff9800;
+}
+
+.contact-support {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  padding: 2rem !important;
+  border-left: none !important;
+}
+
+.contact-support h2 {
+  color: white;
+}
+
+.contact-support p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.1rem;
+}
+
+.contact-email,
+.contact-phone {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .returns-exchange-content {
+    padding: 2rem 1rem;
+  }
+
+  .returns-exchange-content h1 {
+    font-size: 2rem;
+  }
+
+  .steps-container {
+    grid-template-columns: 1fr;
+  }
+
+  .refund-grid {
+    grid-template-columns: 1fr;
+  }
+}

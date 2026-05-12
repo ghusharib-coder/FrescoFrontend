@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
+import Footer from './Footer'
 import { Outlet } from 'react-router-dom'
 
 const ShopingCart = () => {
@@ -7,6 +8,7 @@ const ShopingCart = () => {
     <div className='Shoping-cart'>
       <Navbar/>
       <Outlet/>
+      <Footer/>
     </div>
   )
 }

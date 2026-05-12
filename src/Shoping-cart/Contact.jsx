@@ -16,9 +16,9 @@ const Contact = () => {
       reset();
     }
   return (
-    <div className='Contact' style={{ padding: '2rem', margin: 'auto', fontFamily: 'Arial, sans-serif' }}>
-      <h1 style={{ fontSize: '2.5rem', color: '#4B0082', marginBottom: '1rem' }}>Contact Us</h1>
-      <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
+    <div className='Contact' style={{width:'100vw'}}>
+      <h1>📞 Contact Us</h1>
+      <p>
         We’d love to hear from you! Whether you have questions about our products, need assistance with your order, 
         or simply want to share your feedback, our team is here to help.
       </p>
@@ -33,15 +33,12 @@ const Contact = () => {
           📧 <strong>Email:</strong> support@FRESCO.com
         </p>
       </div>
-      <p style={{ fontSize: '1.1rem', marginTop: '1rem', lineHeight: '1.8' }}>
-        Or fill out the form below and we’ll get back to you as soon as possible:
+      <p>
+        Or fill out the form below and we'll get back to you as soon as possible:
       </p>
       
-       <form onSubmit={handleSubmit(OnSubmit)} className="messageForm"
-       style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}
-       >
+       <form onSubmit={handleSubmit(OnSubmit)} className="messageForm">
         <input
-        style={{ padding: '0.8rem', fontSize: '1rem' }}
           placeholder="Enter Name"
           {...register("name", {
             required: "Enter name",

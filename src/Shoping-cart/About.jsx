@@ -3,22 +3,32 @@ import React from 'react';
 const About = () => {
   return (
     <div className='About' style={{ padding: '2rem', margin: 'auto', fontFamily: 'Arial, sans-serif' }}>
-      <h1 style={{ fontSize: '2.5rem', color: '#4B0082', marginBottom: '1rem' }}>About Us</h1>
-      <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-        Welcome to <strong>MyStore</strong> – your one-stop destination for trendy, high-quality products that suit your lifestyle. 
-        At FRESCO, we believe in delivering not just products but a complete shopping experience that is convenient, enjoyable, and reliable.
+      <h1>🏪 About FRESCO Store</h1>
+      <p>
+        Welcome to <strong>FRESCO Store</strong> – your ultimate destination for quality, trendy, and affordable products that elevate your lifestyle! 
+        We're passionate about bringing you the best shopping experience with curated collections and exceptional service.
       </p>
-      <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-        Our journey started with a simple idea: to make online shopping easy and stress-free for everyone. Today, 
-        we proudly serve thousands of happy customers, offering products that blend style, comfort, and affordability.
+      <p>
+        <strong>🚀 Our Mission</strong><br/>
+        Our journey began with a simple vision: to revolutionize online shopping by making it accessible, enjoyable, and trustworthy for everyone. Today, 
+        we proudly serve thousands of satisfied customers across the globe.
       </p>
-      <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-        We carefully curate our collection to ensure every product meets the highest standards of quality. 
-        From everyday essentials to the latest trends, you’ll find everything you need in one place.
+      <p>
+        <strong>💎 Quality First</strong><br/>
+        We meticulously curate every product in our collection to ensure it meets our highest standards of quality, durability, and style. 
+        From everyday essentials to exclusive finds, we have something special for everyone.
       </p>
-      <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-        Thank you for choosing <strong>FRESCO</strong>. Your trust means everything to us. 
-        We promise to keep working hard to bring you the best shopping experience possible.
+      <p>
+        <strong>🎯 Our Values</strong><br/>
+        ✓ Customer Satisfaction - Your happiness is our priority<br/>
+        ✓ Quality Products - Only the best makes it to our store<br/>
+        ✓ Fair Pricing - Great quality at prices that won't break the bank<br/>
+        ✓ Fast Delivery - Get your items quickly and reliably<br/>
+      </p>
+      <p>
+        <strong>💝 Thank You</strong><br/>
+        Thank you for choosing FRESCO! Your trust and support mean everything to us. 
+        We're committed to continuously improving and bringing you an exceptional shopping experience every single day.
       </p>
     </div>
   );
