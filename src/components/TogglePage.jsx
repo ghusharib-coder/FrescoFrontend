@@ -6,7 +6,7 @@ const TogglePage = () => {
   const [LoggedIn, setLoggedIn] = useState(true);
   return (
     <div className="container">
-      <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🛍️ FRESCO Store</h1>
+      <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem',color:'white' }}>🛍️ FRESCO Store</h1>
       <p style={{ fontSize: '1.1rem', marginBottom: '1rem', opacity: 0.9 }}>Welcome to your shopping paradise</p>
       <div className="Form">
         <div className="Form-buttons">
