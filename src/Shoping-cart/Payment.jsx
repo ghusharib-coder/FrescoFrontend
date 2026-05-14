@@ -94,7 +94,7 @@ const Payment = () => {
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500));
 
-      const response = await fetch(`${API_BASE_URL}/order/payment`, {
+      const response = await fetch(`{https://fresco-backend-gray.vercel.app/api/users/order/payment`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

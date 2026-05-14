@@ -85,7 +85,7 @@ const Checkout = () => {
     };
 
     try {
-      const response = await fetch(`${API_BASE_URL}/order/create`, {
+      const response = await fetch(`https://fresco-backend-gray.vercel.app/api/users/order/create`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(orderData),
@@ -108,10 +108,10 @@ const Checkout = () => {
   const totalPrice = calculateTotal();
 
   return (
-    <div className="checkout-container" style={{width:'100vw'}}>
+    <div className="checkout-container" style={{width:'100vw',display:'flex',alignItems:'center',justifyContent:'center'}}>
       {/* Header with Progress */}
       <div className="checkout-header">
-        <h1>Secure Checkout</h1>
+        <p style={{fontSize:'20px',padding:'10px',textAlign:'center'}}>Fresco Secure Checkout</p>
         <div className="progress-steps">
           <div className="step active">
             <div className="step-number">1</div>
