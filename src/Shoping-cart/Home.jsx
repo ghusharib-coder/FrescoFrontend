@@ -38,7 +38,7 @@ const Home = () => {
   setLoadingProductId(product.id);
   
   try {
-    const res=await fetch(`${API_BASE_URL}/add`, {
+    const res=await fetch(`https://fresco-backend-gray.vercel.app/api/users/add`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

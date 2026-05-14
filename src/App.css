@@ -779,6 +779,19 @@
   margin: 0;
   font-style: italic;
 }
+/* Tablet/iPad Responsive (1024px and below) */
+@media (max-width: 1024px) {
+  #Shoping-cart-home {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .products {
+    width: 22rem;
+    height: 26rem;
+  }
+}
+
+/* Tablet/Medium Devices (768px and below) */
 @media (max-width: 768px) {
   .container h1 {
     font-size: 2.5rem;
@@ -818,13 +831,61 @@
     width: 90%;
   }
   #Shoping-cart-home {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 1rem;
   }
   .products {
-    width: 95%;
+    width: calc(50% - 0.6rem);
+    max-width: 16rem;
+    height: 24rem;
+  }
+  .product-title {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+  .product-price {
+    font-size: 1rem;
+  }
+  .Home-product-button button {
+    font-size: 0.8rem;
   }
   .footer-container {
     grid-template-columns: 1fr !important;
+  }
+}
+
+/* Mobile Small Devices (480px and below) */
+@media (max-width: 480px) {
+  #Shoping-cart-home {
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  .products {
+    width: 100%;
+    max-width: 100%;
+    height: 22rem;
+  }
+  .product-title {
+    height: 12%;
+    font-size: 0.75rem;
+    padding: 0.6rem;
+  }
+  .product-image {
+    height: 50%;
+  }
+  .product-price {
+    height: 13%;
+    font-size: 0.9rem;
+  }
+  .Home-product-button {
+    height: 12%;
+  }
+  .Home-product-button button {
+    font-size: 0.7rem;
+    font-weight: 500;
   }
 }
 
