@@ -95,7 +95,7 @@ catch (error) {
     e.preventDefault();
   };
   return (
-    <div className="Shoping-cart">
+    <div className="Shoping-cart" style={{width:'100vw'}}>
       <div id="Shoping-cart-banner">
         <Banner/>
       </div>
