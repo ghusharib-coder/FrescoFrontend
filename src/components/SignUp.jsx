@@ -21,7 +21,7 @@ function SignUp({switchToLogin}) {
     setIsLoading(true);
     try {
       const payload = { name: data.name, password: data.password };
-      const res = await fetch(`${API_BASE_URL}/signup`, {
+      const res = await fetch(`https://fresco-backend-gray.vercel.app/api/users/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

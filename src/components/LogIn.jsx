@@ -18,7 +18,7 @@ function LogIn({ switchToLogin }) {
   const OnSubmit = async (data) => {
     setIsLoading(true);
     try {
-      const res = await fetch(`${API_BASE_URL}/login`, {
+      const res = await fetch(`https://fresco-backend-gray.vercel.app/api/users/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
