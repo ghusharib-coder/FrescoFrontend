@@ -108,10 +108,11 @@ const Checkout = () => {
   const totalPrice = calculateTotal();
 
   return (
-    <div className="checkout-container" style={{width:'100vw',display:'flex',alignItems:'center',justifyContent:'center'}}>
+    <div className="checkout-container" style={{minWidth:'100vw',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center'}}>
       {/* Header with Progress */}
       <div className="checkout-header">
-        <p style={{fontSize:'20px',padding:'10px',textAlign:'center'}}>Fresco Secure Checkout</p>
+        
+        <p style={{fontSize:'2rem',padding:'10px',textAlign:'center',fontWeight:'bold',color:'purple'}}>🛍️ Fresco Secure Checkout</p>
         <div className="progress-steps">
           <div className="step active">
             <div className="step-number">1</div>
