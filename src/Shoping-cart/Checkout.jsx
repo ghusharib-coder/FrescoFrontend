@@ -3,6 +3,8 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import API_BASE_URL from '../config.js';
 import './Checkout.css';
 
+const USD_TO_PKR = 280;
+
 const Checkout = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -247,7 +249,7 @@ const Checkout = () => {
                 </div>
                 <div className="item-details">
                   <div className="item-name">{item.name}</div>
-                  <div className="item-price">${item.price.toFixed(2)}</div>
+                  <div className="item-price">Rs. {(item.price * USD_TO_PKR).toFixed(2)}</div>
                   <div className="item-quantity-control">
                     <label>Qty:</label>
                     <input
@@ -259,7 +261,7 @@ const Checkout = () => {
                   </div>
                 </div>
                 <div className="item-total">
-                  ${(item.price * (quantities[item.productId] || 1)).toFixed(2)}
+                  Rs. {((item.price * (quantities[item.productId] || 1)) * USD_TO_PKR).toFixed(2)}
                 </div>
               </div>
             ))}

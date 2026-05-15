@@ -7,6 +7,7 @@ const Payment = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const order = location.state?.order || JSON.parse(localStorage.getItem('currentOrder'));
+  const USD_TO_PKR = 280; // Exchange rate
 
   const [paymentMethod, setPaymentMethod] = useState('easypaisa');
   const [easypaisaData, setEasypaisaData] = useState({
@@ -56,7 +57,7 @@ const Payment = () => {
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
       // Call backend to process payment
-      const response = await fetch(`${API_BASE_URL}/order/payment`, {
+      const response = await fetch(`https://fresco-backend-gray.vercel.app/api/users/order/payment`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -136,7 +137,7 @@ const Payment = () => {
                 <div className="payment-item-details">
                   <div className="item-name">{item.name}</div>
                   <div className="item-qty">Qty: {item.quantity}</div>
-                  <div className="item-price">${(item.price * item.quantity).toFixed(2)}</div>
+                  <div className="item-price">Rs. {(item.price * item.quantity * USD_TO_PKR).toFixed(2)}</div>
                 </div>
               </div>
             ))}
@@ -155,7 +156,7 @@ const Payment = () => {
           <div className="price-breakdown">
             <div className="price-row">
               <span>Subtotal:</span>
-              <span>${order.totalPrice}</span>
+              <span>Rs. {(order.totalPrice * USD_TO_PKR).toFixed(2)}</span>
             </div>
             <div className="price-row">
               <span>Shipping:</span>
@@ -163,7 +164,7 @@ const Payment = () => {
             </div>
             <div className="price-row total">
               <span>Total Amount:</span>
-              <span>${order.totalPrice}</span>
+              <span>Rs. {(order.totalPrice * USD_TO_PKR).toFixed(2)}</span>
             </div>
           </div>
         </div>
@@ -266,12 +267,12 @@ const Payment = () => {
                   <div className="cod-info">
                     <h3>💵 Cash on Delivery</h3>
                     <p>
-                      You can pay <strong>${order.totalPrice}</strong> to our delivery person when the package arrives at your doorstep.
+                      You can pay <strong>Rs. {(order.totalPrice * USD_TO_PKR).toFixed(2)}</strong> to our delivery person when the package arrives at your doorstep.
                     </p>
                     <div className="cod-details">
                       <div className="detail-item">
                         <span className="label">Total Amount:</span>
-                        <span className="value">${order.totalPrice}</span>
+                        <span className="value">Rs. {(order.totalPrice * USD_TO_PKR).toFixed(2)}</span>
                       </div>
                       <div className="detail-item">
                         <span className="label">Delivery Time:</span>

@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './OrderConfirmation.css';
 
+const USD_TO_PKR = 280;
+
 const OrderConfirmation = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -39,7 +41,7 @@ const OrderConfirmation = () => {
 
           <div className="detail-section">
             <h3>💵 Total Amount</h3>
-            <p className="total-amount">${order.totalPrice}</p>
+            <p className="total-amount">Rs. {(order.totalPrice * USD_TO_PKR).toFixed(2)}</p>
           </div>
 
           <div className="detail-section">
@@ -60,9 +62,9 @@ const OrderConfirmation = () => {
                   <img src={item.image} alt={item.name} />
                   <div className="item-info">
                     <div className="item-title">{item.name}</div>
-                    <div className="item-meta">Qty: {item.quantity} × ${item.price}</div>
+                    <div className="item-meta">Qty: {item.quantity} × Rs. {(item.price * USD_TO_PKR).toFixed(2)}</div>
                   </div>
-                  <div className="item-price">${(item.price * item.quantity).toFixed(2)}</div>
+                  <div className="item-price">Rs. {((item.price * item.quantity) * USD_TO_PKR).toFixed(2)}</div>
                 </div>
               ))}
             </div>

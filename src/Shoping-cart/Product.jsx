@@ -4,6 +4,9 @@ import { add } from "./cartSlice";
 import { AddPopup} from "./Popup";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+
+const USD_TO_PKR = 280;
+
 const Product = () => {
     const [ShowPopup, setShowPopup] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -34,7 +37,7 @@ const Product = () => {
           <strong>{product.title}</strong>
         </div>
         <div className="product-page-title" style={{ textAlign: 'start', fontSize: '1.3rem', color: '#667eea' }}>
-          <strong>💰 Price: ${product.price}</strong>
+          <strong>💰 Price: Rs. {(product.price * USD_TO_PKR).toFixed(2)}</strong>
         </div>
         <div className="product-page-title" style={{ textAlign: 'start', fontSize: '1.2rem', color: '#ff9800' }}>
           <strong>⭐ Rating: {product.rating.rate}/5</strong>

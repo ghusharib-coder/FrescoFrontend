@@ -8,6 +8,9 @@ import { add } from "./cartSlice";
 import API_BASE_URL from '../config.js';
 import { AddPopup, DuplicatePopup } from "./Popup";
 import Banner from "./Banner";
+
+const USD_TO_PKR = 280;
+
 const Home = () => {
   const dispatch = useDispatch();
   const [ShowPopup, setShowPopup] = useState(false);
@@ -147,7 +150,7 @@ catch (error) {
                   </div>{" "}
                   <div className="product-price">
                     {" "}
-                    <strong>Price: ${product.price}</strong>{" "}
+                    <strong>Price: Rs. {(product.price * USD_TO_PKR).toFixed(2)}</strong>{" "}
                   </div>{" "}
                 </Link>{" "}
               </div>{" "}

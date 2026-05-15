@@ -7,6 +7,8 @@ import API_BASE_URL from '../config.js';
 import ReactDOM from "react-dom";
 import { RemovePopup } from "./Popup";
 
+const USD_TO_PKR = 280;
+
 const Cart = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -87,7 +89,7 @@ const Cart = () => {
     <div className="cart" style={{ filter: ShowPopup && "blur(10px)",width:'100vw' }}>
       <h2>🛒 Your Shopping Cart</h2>
       <div style={{ fontSize: '1.2rem', marginBottom: '1.5rem', color: '#667eea', fontWeight: '600' }}>
-        Total Items: {products.length} | Total Price: <span style={{ color: '#ff6b6b', fontSize: '1.4rem' }}>${totalPrice}</span>
+        Total Items: {products.length} | Total Price: <span style={{ color: '#ff6b6b', fontSize: '1.4rem' }}>Rs. {(totalPrice * USD_TO_PKR).toFixed(2)}</span>
       </div>
 
       {products.length === 0 ? (
@@ -106,7 +108,7 @@ const Cart = () => {
                   <strong>{product.name}</strong>
                 </div>
                 <div className="product-price">
-                  <strong>💰 ${product.price}</strong>
+                  <strong>💰 Rs. {(product.price * USD_TO_PKR).toFixed(2)}</strong>
                 </div>
                 <div className="product-description">
                   <strong>📝 Description:</strong> {product.description}
